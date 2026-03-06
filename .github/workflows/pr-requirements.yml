@@ -86,12 +86,12 @@ jobs:
                 });
               }
 
-              await github.rest.pulls.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: prNumber,
-                state: 'closed',
-              });
+              # await github.rest.pulls.update({
+              #   owner: context.repo.owner,
+              #   repo: context.repo.repo,
+              #   pull_number: prNumber,
+              #   state: 'closed',
+              # });
 
               core.setFailed('PR must reference an issue');
               return;
@@ -176,12 +176,12 @@ jobs:
                 });
               }
 
-              await github.rest.pulls.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: prNumber,
-                state: 'closed',
-              });
+              # await github.rest.pulls.update({
+              #   owner: context.repo.owner,
+              #   repo: context.repo.repo,
+              #   pull_number: prNumber,
+              #   state: 'closed',
+              # });
 
               core.setFailed('PR author must be assigned to the linked issue');
             } else {
